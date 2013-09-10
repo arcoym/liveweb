@@ -1,0 +1,154 @@
+<html>
+	<head>
+
+		<video loop width="360" height="240" id="thevideo" >
+			<source src="FilesForUpload/AC_Face_LO.mp4" type="video/mp4">
+			<source src="FilesForUpload/AC_Face_LO.ogv" type="video/ogg">
+			Your browser does not support the video tag.
+		</video>
+
+		<video loop width="360" height="240" id="thevideo2">
+			<source src="FilesForUpload/AC_Face_RO.mp4" type="video/mp4">
+			<source src="FilesForUpload/AC_Face_RO.ogv" type="video/ogg">
+			Your browser does not support the video tag.
+		</video>
+
+		<p>
+		<video loop width="360" height="240" id="thevideo3" >
+			<source src="FilesForUpload/AC_Face_LU.mp4" type="video/mp4">
+			<source src="FilesForUpload/AC_Face_LU.ogv" type="video/ogg">
+			Your browser does not support the video tag.
+		</video>
+
+
+		<video loop width="360" height="240" id="thevideo4" >
+			<source src="FilesForUpload/AC_Face_RU.mp4" type="video/mp4">
+			<source src="FilesForUpload/AC_Face_RU.ogv" type="video/ogg">
+			Your browser does not support the video tag.
+		</video>
+
+
+	</p>
+		<input type="button" value="Click Me" onCLick="playVideo();"/>
+	</br>
+		<input type="button" value="Me Next!" onClick="pauseVideo();"/>
+	</br>
+		<input type="button" value="Now Me!" onClick="mixVideo1();"/>
+	</br>
+		<input type="button" value="Me Too!" onclick="mixVideo2();"/>
+	</br>
+		<input type="button" value="Me Last!" onCLick="playVideo();"/>
+	</br>
+
+		<canvas width="400" height="100" id="myCanvas" />;
+
+
+		<script type="text/javascript">
+
+			//alert("Hi there!");
+			
+			var manivideo = function() {
+
+				var theVideoObject = document.getElementById("thevideo");
+				var theVideoObject = document.getElementById("thevideo2");
+				var theVideoObject = document.getElementById("thevideo3");
+				var theVideoObject = document.getElementById("thevideo4");
+
+			};
+
+			var playVideo = function() {
+
+				var theVideoObject = document.getElementById("thevideo");
+				theVideoObject.play();
+				var theVideoObject = document.getElementById("thevideo2");
+				theVideoObject.play();
+				var theVideoObject = document.getElementById("thevideo3");
+				theVideoObject.play();
+				var theVideoObject = document.getElementById("thevideo4");
+				theVideoObject.play();
+			};
+
+				var pauseVideo = function() {
+
+				var theVideoObject = document.getElementById("thevideo");
+				theVideoObject.pause();
+				var theVideoObject = document.getElementById("thevideo2");
+				theVideoObject.pause();
+				var theVideoObject = document.getElementById("thevideo3");
+				theVideoObject.pause();
+				var theVideoObject = document.getElementById("thevideo4");
+				theVideoObject.pause();
+			};
+
+				var mixVideo1 = function() {
+
+				var theVideoObject = document.getElementById("thevideo");
+				theVideoObject.play();
+			};
+
+
+				var mixVideo2 = function() {
+
+				var theVideoObject = document.getElementById("thevideo4");
+				theVideoObject.play();
+			};
+
+
+			/*
+
+			function changeButton() {
+
+				document.getElementById("mixitup").value = "Click me Again!";
+				
+			} */
+
+
+			var canvas = document.getElementById('myCanvas');
+			var context = canvas.getContext('2d');
+
+			context.font= "30px Arial";
+			context.fillText("My Interactive Portrait", 10,50);
+	
+		</script> 
+
+		<style>
+
+			#myCanvas {
+				position: relative;
+				left: 10px;
+				top: -580px;
+			}
+			#thevideo {
+				position: relative;
+				left: 310px;
+				top: 160px;
+			}
+
+			#thevideo2 {
+				position: relative;
+				left: 320px;
+				top: 160px;
+			}
+
+			#thevideo3 {
+				position: relative;
+				left: 310px;
+				top: 120px;
+			}
+
+			#thevideo4 {
+				position: relative;
+				left: 320px;
+				top: 120px;
+			}
+
+
+		</style>
+
+	</head>
+
+	<body>
+
+	</body>
+
+</html>
